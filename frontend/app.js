@@ -5,7 +5,7 @@
   const THEME_KEY = "bankwise_theme";
   const DENSITY_KEY = "bankwise_density";
   const LANDING_KEY = "bankwise_default_page";
-  const API = () => (localStorage.getItem(API_KEY) || "http://localhost:5000").replace(/\/$/, "");
+  const API = () => (localStorage.getItem(API_KEY) || "https://bankwise-api.onrender.com").replace(/\/$/, "");  
   const screen = document.body.dataset.screen || "";
   const routes = {
     overview: "bankwise_overview_dashboard", "upload-statement": "bankwise_upload_statement",
