@@ -1,0 +1,17 @@
+Flask==3.1.1
+Flask-Cors==6.0.1
+Flask-JWT-Extended==4.7.1
+python-dotenv==1.1.1
+pymongo==4.13.2
+PyMuPDF==1.26.3
+pdfplumber==0.11.7
+pypdf==5.7.0
+pytesseract==0.3.13
+opencv-python-headless==4.11.0.86
+Pillow==11.2.1
+pandas==2.3.1
+numpy==2.2.6
+scikit-learn==1.7.1
+joblib==1.5.1
+openpyxl==3.1.5
+pytest==8.4.1

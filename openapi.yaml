@@ -1,0 +1,227 @@
+openapi: 3.0.3
+info:
+  title: BankWise API
+  version: 1.0.0
+  description: Authenticated API for bank statement ingestion, processing, classification, analytics, anomaly review, and exports.
+servers:
+  - url: http://localhost:5000
+security:
+  - bearerAuth: []
+paths:
+  /health:
+    get:
+      security: []
+      summary: Application and MongoDB health
+      responses: {'200': {description: Healthy}, '503': {description: Database unavailable}}
+  /api/auth/register:
+    post:
+      security: []
+      summary: Register account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                name: {type: string, maxLength: 120}
+                email: {type: string, format: email}
+                password: {type: string, minLength: 10}
+      responses: {'201': {description: Registered}}
+  /api/auth/login:
+    post:
+      security: []
+      summary: Obtain bearer JWT
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: {type: string, format: email}
+                password: {type: string}
+      responses: {'200': {description: Authenticated}}
+  /api/auth/me:
+    get:
+      summary: Current user
+      responses: {'200': {description: User profile}}
+  /api/classification/review-queue:
+    get:
+      summary: Paginated transactions requiring review for the current account
+      parameters:
+        - {in: query, name: page, schema: {type: integer, minimum: 1}}
+        - {in: query, name: limit, schema: {type: integer, minimum: 1, maximum: 100}}
+      responses: {'200': {description: Current account review queue}}
+  /api/data/clear:
+    delete:
+      summary: Clear imported statement data for the current account
+      description: Deletes the authenticated user's statements, transactions, anomalies, feedback, processing history, and stored statement files. The user account and shared classifier models remain.
+      responses: {'200': {description: Account data cleared}, '409': {description: A statement is still processing}}
+    patch:
+      summary: Update the current user's name and optional profile details
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name: {type: string, maxLength: 120}
+                phone: {type: string, maxLength: 40}
+                institution: {type: string, maxLength: 120}
+                city: {type: string, maxLength: 100}
+      responses: {'200': {description: Updated profile}}
+  /api/statements/upload:
+    post:
+      summary: Upload PDF as multipart form field file
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file]
+              properties:
+                file: {type: string, format: binary}
+      responses: {'201': {description: Statement accepted}}
+  /api/statements:
+    get:
+      summary: List owned statements
+      responses: {'200': {description: Statement list}}
+  /api/statements/{statement_id}:
+    get:
+      summary: Get statement
+      parameters: [{in: path, name: statement_id, required: true, schema: {type: string}}]
+      responses: {'200': {description: Statement}}
+    delete:
+      summary: Delete owned statement and transactions
+      parameters: [{in: path, name: statement_id, required: true, schema: {type: string}}]
+      responses: {'204': {description: Deleted}}
+  /api/statements/{statement_id}/process:
+    post:
+      summary: Process uploaded statement
+      parameters: [{in: path, name: statement_id, required: true, schema: {type: string}}]
+      responses: {'200': {description: Processing finished}}
+  /api/statements/{statement_id}/status:
+    get:
+      summary: Poll statement status
+      parameters: [{in: path, name: statement_id, required: true, schema: {type: string}}]
+      responses: {'200': {description: Processing status}}
+  /api/transactions:
+    get:
+      summary: Paginated owned transactions; optional category and statement_id filters
+      parameters:
+        - {in: query, name: page, schema: {type: integer, default: 1}}
+        - {in: query, name: limit, schema: {type: integer, default: 25, maximum: 100}}
+        - {in: query, name: category, schema: {type: string}}
+        - {in: query, name: statement_id, schema: {type: string}}
+        - {in: query, name: date_from, schema: {type: string, format: date}}
+        - {in: query, name: date_to, schema: {type: string, format: date}}
+        - {in: query, name: search, schema: {type: string}}
+      responses: {'200': {description: Transaction page}}
+  /api/transactions/reclassify:
+    post:
+      summary: Re-run classification for the authenticated user's transactions, preserving corrected rows
+      responses: {'200': {description: Count of processed and changed transactions}}
+  /api/transactions/deduplicate:
+    post:
+      summary: Remove exact duplicate transactions from the authenticated user's ledger
+      responses: {'200': {description: Count of removed duplicate transactions}}
+  /api/transactions/{transaction_id}:
+    parameters: [{in: path, name: transaction_id, required: true, schema: {type: string}}]
+    get: {summary: Get owned transaction, responses: {'200': {description: Transaction}}}
+    put:
+      summary: Edit owned transaction or submit category correction
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description: {type: string}
+                date: {type: string, format: date}
+                debit: {type: number, nullable: true}
+                credit: {type: number, nullable: true}
+                balance: {type: number, nullable: true}
+                reference: {type: string, nullable: true}
+                category: {type: string}
+      responses: {'200': {description: Updated}}
+    delete: {summary: Delete owned transaction, responses: {'204': {description: Deleted}}}
+  /api/classification/predict:
+    post:
+      summary: Classify description using rules and the trained model
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [description]
+              properties:
+                description: {type: string}
+      responses: {'200': {description: Prediction}}
+  /api/classification/metrics:
+    get: {summary: Current model metrics and recent version history, responses: {'200': {description: Metrics}}}
+  /api/classification/summary:
+    get: {summary: Owner-scoped transaction processing, review, confidence, and category counts, responses: {'200': {description: Processing summary}}}
+  /api/classification/feedback:
+    get:
+      summary: Admin-only paginated feedback queue
+      parameters:
+        - {in: query, name: page, schema: {type: integer, default: 1}}
+        - {in: query, name: limit, schema: {type: integer, default: 25, maximum: 100}}
+        - {in: query, name: status, schema: {type: string, enum: [pending, approved]}}
+      responses: {'200': {description: Feedback page}, '403': {description: Administrator access required}}
+  /api/classification/retrain:
+    post: {summary: Admin-only controlled retraining and model promotion, responses: {'200': {description: Promoted model metrics}, '403': {description: Administrator access required}, '409': {description: Feedback count or evaluation gate not met}}}
+  /api/classification/feedback/{feedback_id}/approve:
+    put:
+      summary: Admin-only approval of a user category correction for future training
+      parameters: [{in: path, name: feedback_id, required: true, schema: {type: string}}]
+      responses: {'200': {description: Approved}, '403': {description: Administrator access required}}
+  /api/analytics/overview:
+    get: {summary: Financial overview, responses: {'200': {description: Overview}}}
+  /api/analytics/categories:
+    get: {summary: Category totals, responses: {'200': {description: Category summary}}}
+  /api/analytics/trends:
+    get: {summary: Monthly transaction totals, responses: {'200': {description: Trends}}}
+  /api/analytics/insights:
+    get: {summary: Statistical insights, responses: {'200': {description: Insights}}}
+  /api/anomalies:
+    get: {summary: Paginated anomaly records, responses: {'200': {description: Anomalies}}}
+  /api/anomalies/scan:
+    post:
+      summary: Scan the authenticated user's ledger and add new anomaly flags
+      responses: {'200': {description: Scan counts}}
+  /api/anomalies/{anomaly_id}/review:
+    parameters: [{in: path, name: anomaly_id, required: true, schema: {type: string}}]
+    put:
+      summary: Review or dismiss anomaly
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [status]
+              properties:
+                status: {type: string, enum: [reviewed, dismissed]}
+      responses: {'200': {description: Updated}}
+  /api/anomalies/{anomaly_id}:
+    delete:
+      summary: Dismiss an anomaly and remove it from the active list
+      responses: {'204': {description: Dismissed}}
+  /api/export/csv:
+    get: {summary: Download CSV; optional statement_id and category filters, responses: {'200': {description: CSV file}}}
+  /api/export/excel:
+    get: {summary: Download Excel workbook; optional statement_id and category filters, responses: {'200': {description: XLSX file}}}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

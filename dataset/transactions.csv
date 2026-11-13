@@ -1,0 +1,289 @@
+description,category
+UPI Zomato PAYMENT,Food & Dining
+Zomato CARD PAYMENT TRANSACTION,Food & Dining
+CARD PAYMENT Swiggy PURCHASE,Food & Dining
+Swiggy POS TRANSACTION,Food & Dining
+POS Dominos Pizza TXN,Food & Dining
+Dominos Pizza NETBANKING TRANSACTION,Food & Dining
+NETBANKING McDonalds ONLINE,Food & Dining
+McDonalds UPI TRANSACTION,Food & Dining
+UPI Cafe Coffee Day PAYMENT,Food & Dining
+Cafe Coffee Day CARD PAYMENT TRANSACTION,Food & Dining
+CARD PAYMENT EatSure PURCHASE,Food & Dining
+EatSure POS TRANSACTION,Food & Dining
+POS restaurant bill TXN,Food & Dining
+restaurant bill NETBANKING TRANSACTION,Food & Dining
+NETBANKING food delivery ONLINE,Food & Dining
+food delivery UPI TRANSACTION,Food & Dining
+UPI BigBasket PAYMENT,Groceries
+BigBasket CARD PAYMENT TRANSACTION,Groceries
+CARD PAYMENT DMart PURCHASE,Groceries
+DMart POS TRANSACTION,Groceries
+POS Blinkit TXN,Groceries
+Blinkit NETBANKING TRANSACTION,Groceries
+NETBANKING JioMart ONLINE,Groceries
+JioMart UPI TRANSACTION,Groceries
+UPI Reliance Fresh PAYMENT,Groceries
+Reliance Fresh CARD PAYMENT TRANSACTION,Groceries
+CARD PAYMENT More Supermarket PURCHASE,Groceries
+More Supermarket POS TRANSACTION,Groceries
+POS grocery store TXN,Groceries
+grocery store NETBANKING TRANSACTION,Groceries
+NETBANKING Nature Basket ONLINE,Groceries
+Nature Basket UPI TRANSACTION,Groceries
+UPI Amazon India PAYMENT,Shopping
+Amazon India CARD PAYMENT TRANSACTION,Shopping
+CARD PAYMENT Flipkart PURCHASE,Shopping
+Flipkart POS TRANSACTION,Shopping
+POS Myntra TXN,Shopping
+Myntra NETBANKING TRANSACTION,Shopping
+NETBANKING Ajio ONLINE,Shopping
+Ajio UPI TRANSACTION,Shopping
+UPI Tata Cliq PAYMENT,Shopping
+Tata Cliq CARD PAYMENT TRANSACTION,Shopping
+CARD PAYMENT Croma PURCHASE,Shopping
+Croma POS TRANSACTION,Shopping
+POS Nykaa TXN,Shopping
+Nykaa NETBANKING TRANSACTION,Shopping
+NETBANKING Decathlon ONLINE,Shopping
+Decathlon UPI TRANSACTION,Shopping
+UPI Uber PAYMENT,Transportation
+Uber CARD PAYMENT TRANSACTION,Transportation
+CARD PAYMENT Ola Cabs PURCHASE,Transportation
+Ola Cabs POS TRANSACTION,Transportation
+POS Rapido TXN,Transportation
+Rapido NETBANKING TRANSACTION,Transportation
+NETBANKING Namma Metro ONLINE,Transportation
+Namma Metro UPI TRANSACTION,Transportation
+UPI FASTag toll PAYMENT,Transportation
+FASTag toll CARD PAYMENT TRANSACTION,Transportation
+CARD PAYMENT Delhi Metro PURCHASE,Transportation
+Delhi Metro POS TRANSACTION,Transportation
+POS BMTC bus TXN,Transportation
+BMTC bus NETBANKING TRANSACTION,Transportation
+NETBANKING auto rickshaw ONLINE,Transportation
+auto rickshaw UPI TRANSACTION,Transportation
+UPI Netflix PAYMENT,Entertainment
+Netflix CARD PAYMENT TRANSACTION,Entertainment
+CARD PAYMENT Spotify PURCHASE,Entertainment
+Spotify POS TRANSACTION,Entertainment
+POS BookMyShow TXN,Entertainment
+BookMyShow NETBANKING TRANSACTION,Entertainment
+NETBANKING SonyLiv ONLINE,Entertainment
+SonyLiv UPI TRANSACTION,Entertainment
+UPI Hotstar PAYMENT,Entertainment
+Hotstar CARD PAYMENT TRANSACTION,Entertainment
+CARD PAYMENT PVR Cinemas PURCHASE,Entertainment
+PVR Cinemas POS TRANSACTION,Entertainment
+POS YouTube Premium TXN,Entertainment
+YouTube Premium NETBANKING TRANSACTION,Entertainment
+NETBANKING Steam Games ONLINE,Entertainment
+Steam Games UPI TRANSACTION,Entertainment
+UPI Apollo Pharmacy PAYMENT,Healthcare
+Apollo Pharmacy CARD PAYMENT TRANSACTION,Healthcare
+CARD PAYMENT Fortis Hospital PURCHASE,Healthcare
+Fortis Hospital POS TRANSACTION,Healthcare
+POS MedPlus TXN,Healthcare
+MedPlus NETBANKING TRANSACTION,Healthcare
+NETBANKING Practo ONLINE,Healthcare
+Practo UPI TRANSACTION,Healthcare
+UPI diagnostic lab PAYMENT,Healthcare
+diagnostic lab CARD PAYMENT TRANSACTION,Healthcare
+CARD PAYMENT pharmacy purchase PURCHASE,Healthcare
+pharmacy purchase POS TRANSACTION,Healthcare
+POS clinic consultation TXN,Healthcare
+clinic consultation NETBANKING TRANSACTION,Healthcare
+NETBANKING healthcare bill ONLINE,Healthcare
+healthcare bill UPI TRANSACTION,Healthcare
+UPI school tuition PAYMENT,Education
+school tuition CARD PAYMENT TRANSACTION,Education
+CARD PAYMENT university fee PURCHASE,Education
+university fee POS TRANSACTION,Education
+POS Coursera TXN,Education
+Coursera NETBANKING TRANSACTION,Education
+NETBANKING Udemy ONLINE,Education
+Udemy UPI TRANSACTION,Education
+UPI BYJUs PAYMENT,Education
+BYJUs CARD PAYMENT TRANSACTION,Education
+CARD PAYMENT college fees PURCHASE,Education
+college fees POS TRANSACTION,Education
+POS exam registration TXN,Education
+exam registration NETBANKING TRANSACTION,Education
+NETBANKING education books ONLINE,Education
+education books UPI TRANSACTION,Education
+UPI electricity bill PAYMENT,Utilities
+electricity bill CARD PAYMENT TRANSACTION,Utilities
+CARD PAYMENT BESCOM PURCHASE,Utilities
+BESCOM POS TRANSACTION,Utilities
+POS Airtel Postpaid TXN,Utilities
+Airtel Postpaid NETBANKING TRANSACTION,Utilities
+NETBANKING Jio Fiber ONLINE,Utilities
+Jio Fiber UPI TRANSACTION,Utilities
+UPI water board PAYMENT,Utilities
+water board CARD PAYMENT TRANSACTION,Utilities
+CARD PAYMENT gas bill PURCHASE,Utilities
+gas bill POS TRANSACTION,Utilities
+POS Tata Power TXN,Utilities
+Tata Power NETBANKING TRANSACTION,Utilities
+NETBANKING mobile recharge ONLINE,Utilities
+mobile recharge UPI TRANSACTION,Utilities
+UPI monthly house rent PAYMENT,Housing & Rent
+monthly house rent CARD PAYMENT TRANSACTION,Housing & Rent
+CARD PAYMENT apartment rent PURCHASE,Housing & Rent
+apartment rent POS TRANSACTION,Housing & Rent
+POS landlord payment TXN,Housing & Rent
+landlord payment NETBANKING TRANSACTION,Housing & Rent
+NETBANKING housing society maintenance ONLINE,Housing & Rent
+housing society maintenance UPI TRANSACTION,Housing & Rent
+UPI property maintenance PAYMENT,Housing & Rent
+property maintenance CARD PAYMENT TRANSACTION,Housing & Rent
+CARD PAYMENT rental payment PURCHASE,Housing & Rent
+rental payment POS TRANSACTION,Housing & Rent
+POS flat rent TXN,Housing & Rent
+flat rent NETBANKING TRANSACTION,Housing & Rent
+NETBANKING residential lease ONLINE,Housing & Rent
+residential lease UPI TRANSACTION,Housing & Rent
+UPI IndiGo Airlines PAYMENT,Travel
+IndiGo Airlines CARD PAYMENT TRANSACTION,Travel
+CARD PAYMENT Air India PURCHASE,Travel
+Air India POS TRANSACTION,Travel
+POS MakeMyTrip TXN,Travel
+MakeMyTrip NETBANKING TRANSACTION,Travel
+NETBANKING IRCTC ONLINE,Travel
+IRCTC UPI TRANSACTION,Travel
+UPI Yatra booking PAYMENT,Travel
+Yatra booking CARD PAYMENT TRANSACTION,Travel
+CARD PAYMENT hotel reservation PURCHASE,Travel
+hotel reservation POS TRANSACTION,Travel
+POS airport transfer TXN,Travel
+airport transfer NETBANKING TRANSACTION,Travel
+NETBANKING holiday package ONLINE,Travel
+holiday package UPI TRANSACTION,Travel
+UPI HDFC Life premium PAYMENT,Insurance
+HDFC Life premium CARD PAYMENT TRANSACTION,Insurance
+CARD PAYMENT LIC premium PURCHASE,Insurance
+LIC premium POS TRANSACTION,Insurance
+POS ICICI Lombard TXN,Insurance
+ICICI Lombard NETBANKING TRANSACTION,Insurance
+NETBANKING health insurance premium ONLINE,Insurance
+health insurance premium UPI TRANSACTION,Insurance
+UPI motor insurance PAYMENT,Insurance
+motor insurance CARD PAYMENT TRANSACTION,Insurance
+CARD PAYMENT policy renewal PURCHASE,Insurance
+policy renewal POS TRANSACTION,Insurance
+POS term insurance TXN,Insurance
+term insurance NETBANKING TRANSACTION,Insurance
+NETBANKING insurance payment ONLINE,Insurance
+insurance payment UPI TRANSACTION,Insurance
+UPI monthly salary credit PAYMENT,Salary & Income
+monthly salary credit CARD PAYMENT TRANSACTION,Salary & Income
+CARD PAYMENT payroll credit PURCHASE,Salary & Income
+payroll credit POS TRANSACTION,Salary & Income
+POS employer salary TXN,Salary & Income
+employer salary NETBANKING TRANSACTION,Salary & Income
+NETBANKING salary payment ONLINE,Salary & Income
+salary payment UPI TRANSACTION,Salary & Income
+UPI monthly wages PAYMENT,Salary & Income
+monthly wages CARD PAYMENT TRANSACTION,Salary & Income
+CARD PAYMENT bonus credit PURCHASE,Salary & Income
+bonus credit POS TRANSACTION,Salary & Income
+POS professional income TXN,Salary & Income
+professional income NETBANKING TRANSACTION,Salary & Income
+NETBANKING salary transfer ONLINE,Salary & Income
+salary transfer UPI TRANSACTION,Salary & Income
+UPI mutual fund SIP PAYMENT,Investments
+mutual fund SIP CARD PAYMENT TRANSACTION,Investments
+CARD PAYMENT Zerodha investment PURCHASE,Investments
+Zerodha investment POS TRANSACTION,Investments
+POS Groww mutual fund TXN,Investments
+Groww mutual fund NETBANKING TRANSACTION,Investments
+NETBANKING stock purchase ONLINE,Investments
+stock purchase UPI TRANSACTION,Investments
+UPI demat investment PAYMENT,Investments
+demat investment CARD PAYMENT TRANSACTION,Investments
+CARD PAYMENT NPS contribution PURCHASE,Investments
+NPS contribution POS TRANSACTION,Investments
+POS investment subscription TXN,Investments
+investment subscription NETBANKING TRANSACTION,Investments
+NETBANKING SIP installment ONLINE,Investments
+SIP installment UPI TRANSACTION,Investments
+UPI ATM cash withdrawal PAYMENT,ATM & Cash Withdrawal
+ATM cash withdrawal CARD PAYMENT TRANSACTION,ATM & Cash Withdrawal
+CARD PAYMENT cash withdrawal ATM PURCHASE,ATM & Cash Withdrawal
+cash withdrawal ATM POS TRANSACTION,ATM & Cash Withdrawal
+POS ATM WDL TXN,ATM & Cash Withdrawal
+ATM WDL NETBANKING TRANSACTION,ATM & Cash Withdrawal
+NETBANKING cash dispensed ATM ONLINE,ATM & Cash Withdrawal
+cash dispensed ATM UPI TRANSACTION,ATM & Cash Withdrawal
+UPI ATM withdrawal fee PAYMENT,ATM & Cash Withdrawal
+ATM withdrawal fee CARD PAYMENT TRANSACTION,ATM & Cash Withdrawal
+CARD PAYMENT cash machine withdrawal PURCHASE,ATM & Cash Withdrawal
+cash machine withdrawal POS TRANSACTION,ATM & Cash Withdrawal
+POS branch cash withdrawal TXN,ATM & Cash Withdrawal
+branch cash withdrawal NETBANKING TRANSACTION,ATM & Cash Withdrawal
+NETBANKING ATM transaction ONLINE,ATM & Cash Withdrawal
+ATM transaction UPI TRANSACTION,ATM & Cash Withdrawal
+UPI monthly bank service charge PAYMENT,Bank Charges
+monthly bank service charge CARD PAYMENT TRANSACTION,Bank Charges
+CARD PAYMENT SMS alert charge PURCHASE,Bank Charges
+SMS alert charge POS TRANSACTION,Bank Charges
+POS debit card annual fee TXN,Bank Charges
+debit card annual fee NETBANKING TRANSACTION,Bank Charges
+NETBANKING bank processing charge ONLINE,Bank Charges
+bank processing charge UPI TRANSACTION,Bank Charges
+UPI NEFT service fee PAYMENT,Bank Charges
+NEFT service fee CARD PAYMENT TRANSACTION,Bank Charges
+CARD PAYMENT minimum balance charge PURCHASE,Bank Charges
+minimum balance charge POS TRANSACTION,Bank Charges
+POS account maintenance fee TXN,Bank Charges
+account maintenance fee NETBANKING TRANSACTION,Bank Charges
+NETBANKING GST bank charges ONLINE,Bank Charges
+GST bank charges UPI TRANSACTION,Bank Charges
+UPI personal loan EMI PAYMENT,Loan & EMI
+personal loan EMI CARD PAYMENT TRANSACTION,Loan & EMI
+CARD PAYMENT home loan installment PURCHASE,Loan & EMI
+home loan installment POS TRANSACTION,Loan & EMI
+POS car loan EMI TXN,Loan & EMI
+car loan EMI NETBANKING TRANSACTION,Loan & EMI
+NETBANKING loan repayment ONLINE,Loan & EMI
+loan repayment UPI TRANSACTION,Loan & EMI
+UPI monthly EMI debit PAYMENT,Loan & EMI
+monthly EMI debit CARD PAYMENT TRANSACTION,Loan & EMI
+CARD PAYMENT education loan installment PURCHASE,Loan & EMI
+education loan installment POS TRANSACTION,Loan & EMI
+POS mortgage payment TXN,Loan & EMI
+mortgage payment NETBANKING TRANSACTION,Loan & EMI
+NETBANKING consumer loan repayment ONLINE,Loan & EMI
+consumer loan repayment UPI TRANSACTION,Loan & EMI
+UPI NEFT fund transfer PAYMENT,Transfers
+NEFT fund transfer CARD PAYMENT TRANSACTION,Transfers
+CARD PAYMENT IMPS transfer PURCHASE,Transfers
+IMPS transfer POS TRANSACTION,Transfers
+POS UPI person transfer TXN,Transfers
+UPI person transfer NETBANKING TRANSACTION,Transfers
+NETBANKING RTGS transfer ONLINE,Transfers
+RTGS transfer UPI TRANSACTION,Transfers
+UPI funds transferred PAYMENT,Transfers
+funds transferred CARD PAYMENT TRANSACTION,Transfers
+CARD PAYMENT bank transfer PURCHASE,Transfers
+bank transfer POS TRANSACTION,Transfers
+POS P2P payment TXN,Transfers
+P2P payment NETBANKING TRANSACTION,Transfers
+NETBANKING account transfer ONLINE,Transfers
+account transfer UPI TRANSACTION,Transfers
+UPI miscellaneous payment PAYMENT,Other / Uncategorized
+miscellaneous payment CARD PAYMENT TRANSACTION,Other / Uncategorized
+CARD PAYMENT general merchant purchase PURCHASE,Other / Uncategorized
+general merchant purchase POS TRANSACTION,Other / Uncategorized
+POS unclassified transaction TXN,Other / Uncategorized
+unclassified transaction NETBANKING TRANSACTION,Other / Uncategorized
+NETBANKING other debit entry ONLINE,Other / Uncategorized
+other debit entry UPI TRANSACTION,Other / Uncategorized
+UPI unknown POS purchase PAYMENT,Other / Uncategorized
+unknown POS purchase CARD PAYMENT TRANSACTION,Other / Uncategorized
+CARD PAYMENT merchant payment PURCHASE,Other / Uncategorized
+merchant payment POS TRANSACTION,Other / Uncategorized
+POS miscellaneous credit TXN,Other / Uncategorized
+miscellaneous credit NETBANKING TRANSACTION,Other / Uncategorized
+NETBANKING unrecognized bill payment ONLINE,Other / Uncategorized
+unrecognized bill payment UPI TRANSACTION,Other / Uncategorized
