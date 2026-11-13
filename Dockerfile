@@ -8,5 +8,5 @@ COPY backend /app
 COPY dataset /app/dataset
 RUN mkdir -p /app/uploads /app/models
 EXPOSE 5000
-HEALTHCHECK --interval=30s --timeout=5s --start-period=20s CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:5000/health', timeout=3)" || exit 1
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s CMD python -c "import os,urllib.request; urllib.request.urlopen('http://localhost:'+os.environ.get('PORT','5000')+'/health', timeout=3)" || exit 1
 CMD ["python", "app.py"]
