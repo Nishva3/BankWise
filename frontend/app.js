@@ -2,18 +2,26 @@
   const API_KEY = "bankwise_api_base";
   const TOKEN_KEY = "bankwise_access_token";
   const USER_KEY = "bankwise_user";
+ 
   const THEME_KEY = "bankwise_theme";
   const DENSITY_KEY = "bankwise_density";
   const LANDING_KEY = "bankwise_default_page";
+
   const API = () => (localStorage.getItem(API_KEY) || "https://bankwise-api.onrender.com").replace(/\/$/, "");
+
   const screen = document.body.dataset.screen || "";
   const routes = {
-    overview: "bankwise_overview_dashboard", "upload-statement": "bankwise_upload_statement",
-    transactions: "bankwise_transactions", "financial-insights": "bankwise_financial_insights",
-    "anomaly-detection": "bankwise_anomaly_detection", "classification-review": "bankwise_classification_review",
-    "reports-&-exports": "bankwise_reports_exports", settings: "bankwise_settings",
+    overview: "bankwise_overview_dashboard",
+    "upload-statement": "bankwise_upload_statement",
+    transactions: "bankwise_transactions",
+    "financial-insights": "bankwise_financial_insights",
+    "anomaly-detection": "bankwise_anomaly_detection",
+    "classification-review": "bankwise_classification_review",
+    "reports-&-exports": "bankwise_reports_exports",
+    settings: "bankwise_settings",
     "help-&-support": "bankwise_settings"
   };
+
   const categories = ["Food & Dining", "Groceries", "Shopping", "Transportation", "Entertainment", "Healthcare", "Education", "Utilities", "Housing & Rent", "Travel", "Insurance", "Salary & Income", "Investments", "ATM & Cash Withdrawal", "Bank Charges", "Loan & EMI", "Transfers", "Other / Uncategorized"];
   const token = () => localStorage.getItem(TOKEN_KEY) || sessionStorage.getItem(TOKEN_KEY);
   const preferenceStyle = document.createElement("style");
